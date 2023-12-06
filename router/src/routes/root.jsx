@@ -35,7 +35,7 @@ export default function Root() {
                 </div>
                 <div className='discription'>
                     <h4>Tutorial</h4>
-                    <p>- https://reactrouter.com/en/main/start/tutorial</p>
+                    <a href='https://reactrouter.com/en/main/start/tutorial' target='_blank' rel="noreferrer">- https://reactrouter.com/en/main/start/tutorial</a>
                 </div>
                 <div className="search-form">
                     <Form id="search-form" role="search">

@@ -1,5 +1,3 @@
-import Contact from "./routes/contact";
-
 let contacts = [];
 
 export const getContacts = (q) => {

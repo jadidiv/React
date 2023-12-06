@@ -3,15 +3,21 @@ import { getContact, updateContact } from "../contacts";
 
 export async function loader({ params }) {
     const contact = await getContact(params.contactId);
+    if (!contact) {
+        throw new Response("", {
+          status: 404,
+          statusText: "Contact Not Found",
+        });
+      }
     return { contact };
-  }
+}
 
-  export async function action({ request, params }) {
+export async function action({ request, params }) {
     let formData = await request.formData();
     return updateContact(params.contactId, {
-      favorite: formData.get("favorite") === "true",
+        favorite: formData.get("favorite") === "true",
     });
-  }
+}
 
 export default function Contact() {
     const { contact } = useLoaderData();
@@ -19,17 +25,19 @@ export default function Contact() {
     return (
         <div id="contact">
             <div className="contactImg">
-                {contact.avatar ?(
+                {contact.avatar ? (
                     <img
-                    key={contact.avatar}
-                    src={contact.avatar || null}
-                />
-                ):(
+                        key={contact.avatar}
+                        src={contact.avatar || null}
+                        alt="Avatar"
+                    />
+                ) : (
                     <img
-                    key={contact.id}
-                    src={"https://img.freepik.com/free-vector/user-follower-icons-social-media-notification-icon-speech-bubbles-vector-illustration_56104-847.jpg"}
-                />
-                )}                
+                        key={contact.id}
+                        src={"https://img.freepik.com/free-vector/user-follower-icons-social-media-notification-icon-speech-bubbles-vector-illustration_56104-847.jpg"}
+                        alt="Avatar"
+                    />
+                )}
             </div>
 
             <div>
@@ -48,7 +56,8 @@ export default function Contact() {
                     <p>
                         <a
                             target="_blank"
-                            href={contact.email}
+                            rel="noreferrer"
+                            href={`mailto:${contact.email}`}
                         >
                             {contact.email}
                         </a>
@@ -86,6 +95,9 @@ function Favorite({ contact }) {
     const fetcher = useFetcher();
     // yes, this is a `let` for later
     let favorite = contact.favorite;
+    if (fetcher.formData) {
+        favorite = fetcher.formData.get("favorite") === "true";
+    }
     return (
         <fetcher.Form method="post" id="favoriteForm">
             <button
