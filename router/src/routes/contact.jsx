@@ -1,20 +1,21 @@
 import { Form, useLoaderData, useFetcher } from "react-router-dom";
-import { getContact, updateContact } from "../contacts";
+import { getContact, patchContact } from '../services/contactService';
 
 export async function loader({ params }) {
-    const contact = await getContact(params.contactId);
+    const {data : contact} = await getContact(params.contactId);
     if (!contact) {
         throw new Response("", {
           status: 404,
           statusText: "Contact Not Found",
         });
       }
+      
     return { contact };
 }
 
 export async function action({ request, params }) {
     let formData = await request.formData();
-    return updateContact(params.contactId, {
+    return patchContact(params.contactId, {
         favorite: formData.get("favorite") === "true",
     });
 }

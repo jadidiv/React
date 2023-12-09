@@ -1,16 +1,16 @@
 import '../Style.css';
 import { Outlet, NavLink, useLoaderData, Form, redirect, useNavigate, useSubmit } from "react-router-dom";
-import { getContacts, createContact } from "../../src/contacts"
+import { getContacts, createContact } from '../services/contactService';
 
 export async function action() {
-    const contact = await createContact();
+    const {data : contact} = await createContact();
     return redirect(`/contacts/${contact.id}/edit`);
 }
 
 export async function loader({ request }) {
     const url = new URL(request.url);
     const q = url.searchParams.get("q");
-    const contacts = await getContacts(q);
+    const {data : contacts} = await getContacts(q);
     return { contacts, q };
 }
 
@@ -82,7 +82,7 @@ export default function Root() {
                                         ) : (
                                             <i>No Name</i>
                                         )}{" "}
-                                        {contact.favorite && <span>★</span>}
+                                        {contact.favorite && <span className='Star'>★</span>}
                                     </NavLink>
                                 </li>
                             ))}

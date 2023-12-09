@@ -1,5 +1,5 @@
 import { Form, useLoaderData, redirect, useNavigate } from "react-router-dom";
-import { updateContact } from "../contacts";
+import { updateContact } from '../services/contactService';
 
 export async function action({ request, params }) {
     const formData = await request.formData();
@@ -11,6 +11,7 @@ export async function action({ request, params }) {
 export default function EditContact() {
     const { contact } = useLoaderData();
     const navigate = useNavigate();
+    
 
     return (
         <Form method="post" id="contact-form">
@@ -58,10 +59,20 @@ export default function EditContact() {
                     rows={6}
                 />
             </label>
+            <label>
+                <span>Favorite</span>
+                <input
+                    type="checkbox"
+                    name="favorite"
+                    id="favorite"
+                    defaultChecked={contact.favorite ? true : false}
+                    value={contact.favorite ? "false" : "true"}
+                />
+            </label>
             <p>
                 <span></span>
                 <button type="submit" className="btn">Save</button>
-                <button type="button" className="btn" onClick={() => {navigate(-1);}}>Cancel</button>
+                <button type="button" className="btn" onClick={() => { navigate(-1); }}>Cancel</button>
             </p>
         </Form>
     );

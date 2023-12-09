@@ -31,7 +31,8 @@ a {
 
 /* Css Reset */
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -247,6 +248,17 @@ textarea {
   outline-width: 0;
 }
 
+#contact-form input[type='checkbox'] {
+  flex: none;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 0 auto;
+  gap: 0.5em;
+}
+
 #contact-form span {
   flex-basis: 20%;
   margin: 5px;
@@ -283,4 +295,12 @@ textarea {
 #error-page img {
   width: 300px;
   margin: 30px 0;
+}
+
+.Star {
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  color: gold;
+  cursor: pointer;
 }
