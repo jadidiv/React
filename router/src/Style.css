@@ -10,7 +10,12 @@ span {
   margin: 0;
 }
 
-h1, h2, h3, h4, h4, h6 {
+h1,
+h2,
+h3,
+h4,
+h4,
+h6 {
   color: #361d32;
   text-decoration: none;
 }
@@ -25,6 +30,16 @@ a {
 }
 
 /* Css Reset */
+
+body, html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
 .main {
   display: flex;
 }
@@ -55,7 +70,7 @@ nav a {
   padding: 20px;
   min-width: 400px;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
   background-color: whitesmoke;
   border-right: 1px solid #ddd;
 }
@@ -125,8 +140,9 @@ nav a {
   width: 100%;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
   padding: 0;
 }
 
@@ -136,7 +152,7 @@ li {
 }
 
 #error-page {
-  width:500px;
+  width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -208,15 +224,18 @@ li {
   display: flex;
 }
 
-#contact-form  {
-  flex-basis: 50%;
+#contact-form {
+  max-width: 800px;
+  min-width: 600px;
 }
 
-#contact-form p, label {
+#contact-form p,
+label {
   display: flex;
 }
 
-#contact-form input, textarea {
+#contact-form input,
+textarea {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -225,6 +244,7 @@ li {
   box-sizing: border-box;
   flex: 2;
   margin: 5px;
+  outline-width: 0;
 }
 
 #contact-form span {
