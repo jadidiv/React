@@ -1,3 +1,41 @@
 {
-    "contacts": []
-}
+    "contacts": [
+    ],
+    "posts": [
+      {
+        "title": "The Morning After: Apple may launch an M3 MacBook Air in March",
+        "category": "Technology",
+        "date": "2023-12-12",
+        "body": "According to Bloomberg’s Mark Gurman, Apple is planning big hardware announcements for early 2024. In his Power On newsletter, Gurman predicts the company will release the next iPad Pro and iPad Air generation in March. Gurman says the M3 MacBook Air will als…",
+        "url": "https://images.macrumors.com/t/WeIACbH6Tc8l8HeNlHvEc5LMhVU=/2500x/article-new/2023/10/iOS-17.2-Feature-Triad.jpg"
+      },
+      {
+        "title": "Apple’s Journal App May Be the Only Thing to Keep You Sane This Holiday",
+        "category": "Mobile",
+        "date": "2023-12-14",
+        "body": "There are plenty of things to like about the latest iOS 17.2 update. For one, iPhone 15 Pro users are getting telephoto camera improvements and can finally use the titanium-shelled hardware to shoot spatial videos for the Vision Pro. There’s also a new Action…",
+        "url": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/7a217746bf25217214a3d8a741cfcdd5.jpg"
+      },
+      {
+        "title": "Beeper Mini is up and running again, with a couple of key changes",
+        "category": "Technology",
+        "date": "2023-12-13",
+        "body": "After a tumultuous few days, Beeper Mini is back up and running, allowing you to use iMessage on Android. But, it's not as simple as signing in with a Google account and having your phone number tied to iMessage.",
+        "url": "https://images.macrumors.com/t/WeIACbH6Tc8l8HeNlHvEc5LMhVU=/2500x/article-new/2023/10/iOS-17.2-Feature-Triad.jpg"
+      },
+      {
+        "title": "Apple Music to Incentivize Artists to Make Songs Available in Spatial Audio",
+        "category": "Social",
+        "date": "2023-12-13",
+        "body": "Apple will begin encouraging artists and record labels to adopt Spatial Audio with royalty incentives, Bloomberg reports. Citing sources familiar with the matter, Bloomberg says that Apple will prioritize streams of songs mixed in Dolby Atmos technology …",
+        "url": "https://images.macrumors.com/t/nTDscjod5QUcX1KyGYfcfnYQhQE=/1600x/article-new/2021/06/apple-music-spatial-audio-ad.jpeg"
+      },
+      {
+        "title": "Apple Releases iOS 17.2 and iPadOS 17.2 With Journal App and More",
+        "category": "Mobile",
+        "date": "2023-12-11",
+        "body": "Apple today released iOS 17.2 and iPadOS 17.2, the second major updates to the iOS 17 and iPadOS 17 operating systems that came out in September. The new software comes over a month after Apple released iOS 17.1 and iPadOS 17.1, updates that brought new AirDr…",
+        "url": "https://images.macrumors.com/t/WeIACbH6Tc8l8HeNlHvEc5LMhVU=/2500x/article-new/2023/10/iOS-17.2-Feature-Triad.jpg"
+      }
+    ]
+  }
