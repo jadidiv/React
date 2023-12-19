@@ -4,6 +4,8 @@ import { getPosts } from './service';
 import './App.css';
 import Posts from './posts';
 import Sidebar from './sidebar';
+import Age from './age';
+import Rules from './rules';
 
 export async function loader() {
   const { data: posts } = await getPosts();
@@ -29,10 +31,12 @@ function App() {
       </div>
       <div className='main'>
         <div className='container'>
-          <Posts content={posts.slice(0,5)} />
+          {posts ? (<Posts content={posts.slice(0, 5)} />) : (<><h1 className='connectionError'>Database connection error.</h1><p>Please start Json database server.</p></>)}
+          <Age />
+          <Rules />
         </div>
         <div className='sidebar'>
-          <Sidebar content={posts.slice(0,4)} />
+          {posts ? (<Sidebar content={posts.slice(0, 4)} />) : ("")}
         </div>
       </div>
     </div >

@@ -9,5 +9,6 @@ export async function getPosts() {
         return response;
     }catch(error) {
         console.error(error);
+        return [];
     }
 }
