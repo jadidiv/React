@@ -1,0 +1,110 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: darkolivegreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Segoe UI;
+  overflow: hidden;
+}
+
+.app {
+  position: absolute;
+  width: 900px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome {
+  padding: 30px;
+}
+
+.welcome h1 {
+  margin-bottom: 2px;
+  color: #56322f;
+}
+
+.welcome h3 {
+  margin-bottom: 15px;
+  color: #343326;
+}
+
+.welcome p {
+  line-height: 1.5rem;
+  color: #5d5958;
+}
+
+.navigation {
+  display: block;
+  margin-top: 20px;
+}
+
+.navigation a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: darkolivegreen;
+  color: #dfc595;
+  text-decoration: none;
+}
+
+.panel {
+  width: 1200px;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar a {
+  display: inline-block;
+  padding: 10px 80px;
+  background-color: darkolivegreen;
+  color: #dfc595;
+  text-decoration: none;
+  border-bottom: 1px solid #dfc595;
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background-color: #56322f;
+}
+
+.content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  color: #56322f;
+}
+
+.content p {
+  line-height: 1.5rem;
+  color: #5d5958;
+}
+
+.content-block {
+  margin-bottom: 20px;
+}
