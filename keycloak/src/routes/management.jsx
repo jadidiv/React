@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import Keycloak from 'keycloak-js';
+import keycloak from "../keycloakConfig";
 import { jwtDecode } from "jwt-decode";
-
-const keycloak = new Keycloak({
-    url: 'http://192.168.12.231:8080/auth/',
-    realm: 'ISC',
-    clientId: 'contact',
-    secret: 'Kzgr6A0iEDZrBylgzbdow9msDbIZQ2Ae',
-});
 
 function Management() {
     const [authenticated, setAuthenticated] = useState(false);
